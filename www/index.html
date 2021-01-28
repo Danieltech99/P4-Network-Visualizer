@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="index.css">
+<title>Network Visualizer</title>
+
+<body>
+    <h1>P4 Network Visualizer</h1>
+
+    <div class="controls">
+        <div class="controls_wrapper">
+            <div class="legend" id="layout_section">
+                <h3 class="legend_title">Layout</h3>
+                <select name="" id="layout"></select>
+                <br/>
+                <!-- <input type="button" value="Reset All" onclick="document.querySelectorAll('button').forEach(a=>window.setTimeout(()=>a.click(),400))"> -->
+            </div>
+            <div class="legend" id="packets">
+                <h3 class="legend_title">Packets Processed</h3>
+                <button>Reset Count</button>
+            </div>
+            <div class="legend" id="legend-1">
+                <h3 class="legend_title">Link Rate (Bytes)</h3>
+                <select name="" id="select-1d"></select>
+                <br/>
+                <select name="" id="select-1a"></select>
+                <br/>
+                <button>Reset Scale & Time</button>
+                <div class="legend_map" min=0 max=5>
+                </div>
+            </div>
+            <div class="legend" id="legend-2">
+                <h3 class="legend_title">Switch Q-len</h3>
+                <select name="" id="select-2a"></select>
+                <br/>
+                <button>Reset Scale & Time</button>
+                <div class="legend_map" min=0 max=5>
+                </div>
+                <select name="" id="select-2d" style="display: none;"></select>
+                <br/>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="hello-world"></div>
+
+
+    <div class="stats">
+        <h3 class="legend_title">Packets Processed</h3>
+        <h3 class="legend_title">(Max Nodes)</h3>
+        <ol id="max-packets">
+        </ol>
+        <br/>
+        <h3 class="legend_title">Link Rate</h3>
+        <h3 class="legend_title">(Max Links)</h3>
+        <ol id="max-links">
+        </ol>
+        <br/>
+        <h3 class="legend_title">Switch Q-Len</h3>
+        <h3 class="legend_title">(Max Nodes)</h3>
+        <ol id="max-qlen">
+        </ol>
+    </div>
+
+    <!-- load the d3.js library -->
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/webcola/WebCola/cola.min.js"></script>
+    <script src="bower_components/greuler/dist/greuler.min.js"></script>
+    <script src="bower_components/rainbowvis.js/rainbowvis.js"></script>
+    <script src="dist/index.js"></script>
+</body>

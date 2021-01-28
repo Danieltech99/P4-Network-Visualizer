@@ -1,0 +1,21 @@
+{
+  "name": "P4-Network-Visualizer-Interface",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "greuler": "^0.5.4",
+    "webcola": "^3.3.8",
+    "d3": "3",
+    "rainbowvis.js": "^1.0.1"
+  }
+}

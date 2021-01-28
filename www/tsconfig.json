@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "target": "es5",
+        "lib": ["esnext", "dom"],
+        "module": "none",
+        "sourceMap": true,
+        "outDir": "dist",
+        "outFile": "dist/index.js"
+    }
+}

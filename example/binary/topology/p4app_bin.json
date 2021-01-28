@@ -1,0 +1,65 @@
+{
+  "program": "p4src/l2fwd.p4",
+  "switch": "simple_switch",
+  "compiler": "p4c",
+  "options": "--target bmv2 --arch v1model --std p4-16",
+  "switch_cli": "simple_switch_CLI",
+  "cli": true,
+  "pcap_dump": true,
+  "enable_log": true,
+  "topo_module": {
+    "file_path": "",
+    "module_name": "p4utils.mininetlib.apptopo",
+    "object_name": "AppTopoStrategies"
+  },
+  "controller_module": null,
+  "topodb_module": {
+    "file_path": "",
+    "module_name": "p4utils.utils.topology",
+    "object_name": "Topology"
+  },
+  "mininet_module": {
+    "file_path": "",
+    "module_name": "p4utils.mininetlib.p4net",
+    "object_name": "P4Mininet"
+  },
+  "topology": {
+    "assignment_strategy": "l2",
+    "links": [["a1", "b1", {"bw": 2}], ["a1", "b2", {"bw": 2}], ["b1", "c1", {"bw": 1}], ["b1", "c2", {"bw": 1}], ["b2", "c3", {"bw": 1}], ["b2", "c4", {"bw": 1}], ["c1", "d1", {"bw": 1}], ["c1", "d2", {"bw": 1}], ["c2", "d3", {"bw": 1}], ["c2", "d4", {"bw": 1}], ["c3", "d5", {"bw": 1}], ["c3", "d6", {"bw": 1}], ["c4", "d7", {"bw": 1}], ["c4", "d8", {"bw": 1}], ["d1", "h1", {"bw": 1}], ["d1", "h2", {"bw": 1}], ["d2", "h3", {"bw": 1}], ["d2", "h4", {"bw": 1}], ["d3", "h5", {"bw": 1}], ["d3", "h6", {"bw": 1}], ["d4", "h7", {"bw": 1}], ["d4", "h8", {"bw": 1}], ["d5", "h9", {"bw": 1}], ["d5", "h10", {"bw": 1}], ["d6", "h11", {"bw": 1}], ["d6", "h12", {"bw": 1}], ["d7", "h13", {"bw": 1}], ["d7", "h14", {"bw": 1}], ["d8", "h15", {"bw": 1}], ["d8", "h16", {"bw": 1}]],
+    "hosts": {
+	"h1": {},
+	"h2": {},
+	"h3": {},
+	"h4": {},
+	"h5": {},
+	"h6": {},
+	"h7": {},
+	"h8": {},
+	"h9": {},
+	"h10": {},
+	"h11": {},
+	"h12": {},
+	"h13": {},
+	"h14": {},
+	"h15": {},
+	"h16": {}
+    },
+    "switches": {
+	"a1": {}, 
+	"b1": {}, 
+	"b2": {}, 
+	"c1": {}, 
+	"c2": {}, 
+	"c3": {}, 
+	"c4": {}, 
+	"d1": {}, 
+	"d2": {}, 
+	"d3": {}, 
+	"d4": {}, 
+	"d5": {}, 
+	"d6": {}, 
+	"d7": {}, 
+	"d8": {}
+    }
+  }
+}

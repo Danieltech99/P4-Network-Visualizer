@@ -1,0 +1,92 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    top: 0.2em;
+    text-align: center;
+}
+
+.controls {
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+    width: 300px;
+    /* height: 200px; */
+}
+.stats {
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    width: 180px;
+    overflow: auto;
+    max-height: 100%;
+}
+.stats ol {
+    padding-inline-start: 30px;
+}
+.stats li {
+    color: rgba(0,0,0, 0.3);
+}
+.stats .legend_title + .legend_title {
+    margin-top: 0;
+}
+.stats li span {
+    color: black;
+}
+.controls input[type=button], .controls button, select {
+    min-width: 120px;
+}
+.controls input[type=button], .controls button {
+    display: inline-block;
+    margin-bottom: 0.8em;;
+}
+select {
+    margin-bottom: 0.2em;;
+}
+.legend_title {
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+.legend_map {
+    width: 30px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.legend_map .color {
+    /* border: solid 1px black; */
+    width: 100%;
+    flex: 1 1 auto;
+}
+.legend_map.hide::before, .legend_map.hide::after  {
+    color: white;
+    transition: color 0;
+}
+.legend_map::before, .legend_map::after {
+    position: absolute;
+    left: 100%;
+    margin-left: 20px;
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+.legend_map::before {
+    content: attr(min);
+    bottom: 0;
+}
+.legend_map::after {
+    content: attr(max);
+    top: 0;
+}
+
+
+
+
+svg .node text {
+    font-size: 12px;;
+}
